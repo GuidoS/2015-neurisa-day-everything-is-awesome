@@ -75,12 +75,17 @@
         </p>
       </section>
 
+
       <section id='introduction'>
         <h1>introduction</h1>
-        <h2>Guido Stein</h2>
-        <h2 class="fragment roll-in" style="color:orange;">Guido Like Burrito</h2>
+        <h2>Guido Stein<span class="fragment roll-in" style="color:orange;"> > like burrito</span></h2>
         <ul>
-          <li class="fragment roll-in">GIS Anlayst @ Applied Geographics</li>
+          <li class="fragment roll-in">GIS Anlayst @ Applied Geographics
+            <ul>
+              <li>Modern Web Mapping for Local Governments - Kate Hickey
+                <br/>Session 3, Room 2</li>
+            </ul>
+          </li>
           <li class="fragment roll-in">AvidGeo Meetup Group Founder</li>
           <li class="fragment roll-in">Model Builder, Python, FME, PostGIS, SDE, &amp; CartoDB</li>
         </ul>
@@ -151,28 +156,69 @@
       </section>
 
       <section id='db-integration'>
-        <h2>Database Integration</h2>
-        <pre>
-          <code>SELECT cama_data FROM enterprise_database WHERE query_table &lt;&gt; possible AND query_layer &lt;&gt; possible</code>
-        </pre>
-        <p>&nbsp;</p>
-        <p>Python script extracts sql query from multiple real property data tables from an enterprise database and then joins data into a feature class.</p>
+        <h2>Property Database Integration</h2>
+        <p>Keep parcel data current with real property data</p>
+        <ul style="list-style-type: none;">
+          <li class="fragment roll-in">sql
+            <ul>
+              <li>Query data from multiple tables from CAMA database</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">python
+            <ul>
+              <li>Join query data into a feature class</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">geospatial
+            <ul>
+              <li>Display parcel data with joined CAMA database data</li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <section id='analysis'>
-        <h2>Boundary Change Analysis</h2>
-        <pre>
-          <code class="SQL">SELECT population_effected FROM district_polygons, address_points WHERE ST_Intersects( district_polygons.shape, address_points.shape )
-          </code>
-        </pre>
-        <p>&nbsp;</p>
-        <p>Sql query identifies points within boundary areas, python script us used to swap boundaries and manage output aggregation and reports the different support outputs.</p>
+        <h2>School District Boundary Change Analysis</h2>
+        <p>Determine number of residents affected by district boundary changes</p>
+        <ul style="list-style-type: none;">
+          <li class="fragment roll-in">geospatial
+            <ul>
+              <li>Determine new district assignments to address points</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">sql
+            <ul>
+              <li>Aggregate counts of residents and percent change by district id</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">python
+            <ul>
+              <li>Repeat process across multiple scenarios and report output</li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <section id='data-portal'>
-        <h2>Data Portal (GeoNode)</h2>
-        <p>&nbsp;</p>
-        <p>Python web application sharing and displaying feature classes that are stored in an enterprise database and allow for collaboration through a web application.</p>
+        <h2>Data Portal</h2>
+        <p>Distribute collected data with interested parties and allow for feedback</p>
+        <ul style="list-style-type: none;">
+          <li class="fragment roll-in">sql
+            <ul>
+              <li>Store feature classes, data statistics, and website configuration information</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">geospatial
+            <ul>
+              <li>Search for spatial relationships within database</li>
+            </ul>
+          </li>
+          <li class="fragment roll-in">python
+            <ul>
+              <li>Serve out dynamic web pages with information within database</li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <section id='db'>
