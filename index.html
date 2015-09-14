@@ -150,7 +150,30 @@
         </aside>
       </section>
 
+      <section id='db-integration'>
+        <h2>Database Integration</h2>
+        <pre>
+          <code>SELECT cama_data FROM enterprise_database WHERE query_table &lt;&gt; possible AND query_layer &lt;&gt; possible</code>
+        </pre>
+        <p>&nbsp;</p>
+        <p>Python script extracts sql query from multiple real property data tables from an enterprise database and then joins data into a feature class.</p>
+      </section>
 
+      <section id='analysis'>
+        <h2>Boundary Change Analysis</h2>
+        <pre>
+          <code class="SQL">SELECT population_effected FROM district_polygons, address_points WHERE ST_Intersects( district_polygons.shape, address_points.shape )
+          </code>
+        </pre>
+        <p>&nbsp;</p>
+        <p>Sql query identifies points within boundary areas, python script us used to swap boundaries and manage output aggregation and reports the different support outputs.</p>
+      </section>
+
+      <section id='data-portal'>
+        <h2>Data Portal (GeoNode)</h2>
+        <p>&nbsp;</p>
+        <p>Python web application sharing and displaying feature classes that are stored in an enterprise database and allow for collaboration through a web application.</p>
+      </section>
 
       <section id='db'>
         <img src="https://s3.amazonaws.com/guidostein/githubio/2015-neurisa-day-everything-is-awesome/library.jpg" style="position: absolute; top: -800px; left: -1500px; max-width: none; max-height: none; margin: 0px; border: none;">
@@ -333,31 +356,6 @@
         <h2><a href="http://initd.org/psycopg/">psycopg2</a></h2>
         <h2><a href="https://github.com/mkleehammer/pyodbc">pyodbc</a></h2>
         <h2><a href="https://docs.python.org/2/library/sqlite3.html">sqlite3</a></h2>
-      </section>
-
-      <section id='db-integration'>
-        <h2>Database Integration</h2>
-        <pre>
-          <code>SELECT cama_data FROM enterprise_database WHERE query_table &lt;&gt; possible AND query_layer &lt;&gt; possible</code>
-        </pre>
-        <p>&nbsp;</p>
-        <p>Python script extracts sql query from multiple real property data tables from an enterprise database and then joins data into a feature class.</p>
-      </section>
-
-      <section id='analysis'>
-        <h2>Boundary Change Analysis</h2>
-        <pre>
-          <code class="SQL">SELECT population_effected FROM district_polygons, address_points WHERE ST_Intersects( district_polygons.shape, address_points.shape )
-          </code>
-        </pre>
-        <p>&nbsp;</p>
-        <p>Sql query identifies points within boundary areas, python script us used to swap boundaries and manage output aggregation and reports the different support outputs.</p>
-      </section>
-
-      <section id='data-portal'>
-        <h2>Data Portal (GeoNode)</h2>
-        <p>&nbsp;</p>
-        <p>Python web application sharing and displaying feature classes that are stored in an enterprise database and allow for collaboration through a web application.</p>
       </section>
 
       <section id='outro'>
